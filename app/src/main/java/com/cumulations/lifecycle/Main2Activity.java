@@ -61,4 +61,10 @@ public class Main2Activity extends Activity {
         super.onDestroy();
         Log.d("@@@","Activity2 onDestroy");
     }
+
+    public void nextActivity(View view) {
+        Intent intent=new Intent(this,Main3Activity.class);
+        intent.putExtra("key","Second Activity");
+        startActivity(intent);
+    }
 }

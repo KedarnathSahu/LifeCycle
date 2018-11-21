@@ -17,179 +17,150 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/textview"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
+        android:layout_margin="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:baselineAligned="false"
-        android:orientation="horizontal"
-        android:weightSum="2.0"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-        <Button
-            style="@style/TextStyle"
-            android:text="@string/last" />
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="14">
 
-        <Button
-            style="@style/TextStyle"
-            android:text="@string/next" />
+            <Button
+                style="@style/TextStyle"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/last" />
 
-        <Button
-            style="@style/TextStyle"
-            android:text="@string/reload_content" />
+            <Button
+                style="@style/TextStyle"
+                android:layout_weight="2"
+                android:text="@string/next" />
 
-        <Button
-            style="@style/TextStyle"
-            android:text="@string/exit" />
-    </LinearLayout>
+            <Button
+                style="@style/TextStyle"
+                android:layout_weight="3"
+                android:text="@string/reload_content" />
 
-    <android.support.v7.widget.LinearLayoutCompat
-        android:id="@+id/linearLayoutCompat"
+            <Button
+                style="@style/TextStyle"
+                android:layout_weight="1"
+                android:text="@string/exit" />
+
+            <Button
+                style="@style/TextStyle"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/last" />
+
+            <Button
+                style="@style/TextStyle"
+                android:layout_weight="2"
+                android:text="@string/next" />
+
+            <Button
+                style="@style/TextStyle"
+                android:layout_weight="3"
+                android:text="@string/reload_content" />
+
+            <Button
+                style="@style/TextStyle"
+                android:layout_weight="1"
+                android:text="@string/exit" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <RelativeLayout
-            android:id="@+id/relativeLayout"
-            android:layout_width="match_parent"
-            android:layout_height="125dp">
-
-
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_margin="8dp"
-                android:text="@string/button" />
-
-            <Button
-                android:id="@+id/button9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_margin="8dp"
-                android:layout_toEndOf="@+id/button10"
-                android:layout_toRightOf="@+id/button10"
-                android:text="@string/button" />
-
-            <Button
-                android:id="@+id/button10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_margin="8dp"
-                android:text="@string/button" />
-        </RelativeLayout>
-    </android.support.v7.widget.LinearLayoutCompat>
-
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/tableLayout"
-        android:layout_width="fill_parent"
-        android:layout_height="162dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="400dp"
+        android:layout_margin="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:text="@string/name" />
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/button" />
 
-            <TextView
-                android:id="@+id/textClock"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="2"
-                android:text="@string/text"/>
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/button" />
 
-        </TableRow>
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/button" />
 
-        <TableRow>
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/button5"
+            android:layout_alignStart="@id/button7"
+            android:layout_alignLeft="@id/button7"
+            android:layout_alignEnd="@id/button5"
+            android:layout_alignRight="@id/button5"
+            android:text="@string/button" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:text="@string/first_name" />
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@id/button5"
+            android:layout_alignBottom="@id/button6"
+            android:layout_toEndOf="@id/button5"
+            android:layout_toRightOf="@id/button5"
+            android:text="@string/button" />
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="200sp" />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:text="@string/last_name" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="100sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="2"
-                android:text="@string/submit" />
-        </TableRow>
-
-    </TableLayout>
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="-16dp"
+            android:layout_marginLeft="-16dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/button5"
+            android:layout_toRightOf="@+id/button5"
+            android:text="@string/next_page"
+            android:onClick="nextActivity"/>
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

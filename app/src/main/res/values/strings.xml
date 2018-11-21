@@ -3,9 +3,9 @@
     <string name="button">Button</string>
     <string name="textview">Activity2</string>
     <string name="activity1">Activity1</string>
-    <string name="last">Linear</string>
+    <string name="last">L</string>
     <string name="next">Next</string>
-    <string name="reload_content">Reload Content</string>
+    <string name="reload_content">Reload Context</string>
     <string name="exit">Exit</string>
     <string name="name">Name</string>
     <string name="first_name">First Name</string>
@@ -13,4 +13,5 @@
     <string name="text">Text</string>
     <string name="submit">Submit</string>
     <string name="frame_demo">Frame Demo</string>
+    <string name="next_page">Next PAGE</string>
 </resources>
